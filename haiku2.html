@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>An All JS Haiku Page</title>
+</head>
+<body>
+  <script>
+    // Let's start with the content...
+
+    // Assign haikuOneTitle to a new <h1> element using document.createElement('h1') 
+    var haikuOneTitle = document.createElement('h1')
+    // Update the text of the h1 just created to the title of your first haiku
+    haikuOneTitle.textContent = 'Haiku One';
+
+    // Assign haikuOneLineOne to a new <p> element
+    var haikuOneLineOne = document.createElement('p')
+    // Update the text of haikuOneLineOne to the first line of your first haiku
+    haikuOneLineOne.textContent = 'One shark said to the';
+
+    // Assign haikuOneLineTwo to a new <p> element
+    var haikuOneLineTwo = document.createElement('p')
+
+    // Update the text of haikuOneLineTwo to the second line of your first haiku
+    haikuOneLineTwo.textContent = 'other when eating a clown';
+
+    // Assign haikuOneLineThree to a new <p> element
+    var haikuOneLineThree = document.createElement('p')
+
+    // Update the text of haikuOneLineThree to the second line of your first haiku
+    haikuOneLineThree.textContent = 'fish: this tastes funny.';
+
+    // Append the new HTML elements to the document body. The order appended here will determine the order of appearance on the screen.
+    document.body.appendChild(haikuOneTitle)
+    document.body.appendChild(haikuOneLineOne)
+    document.body.appendChild(haikuOneLineTwo)
+    document.body.appendChild(haikuOneLineThree);
+
+    // Load the html file in your browser. You should see an <h1> and three <p> tags with your haiku text. If not, check the console for errors to assist the debugging process.
+    // Follow the same pattern to render your second haiku as HTML. Use the console.log() tests for reference
+
+    var haikuTwoTitle = document.createElement('h1')
+    haikuTwoTitle.textContent = 'Haiku Two'
+
+    var haikuTwoLineOne = document.createElement('p')
+    haikuTwoLineOne.textContent = 'Five Sylabes here,'
+
+    var haikuTwoLineTwo = document.createElement('p')
+    haikuTwoLineTwo.textContent = 'Seven more Sylabes there'
+
+    var haikuTwoLineThree = document.createElement('p')
+    haikuTwoLineThree.textContent = 'are you happy now?'
+
+    document.body.appendChild(haikuTwoTitle)
+    document.body.appendChild(haikuTwoLineOne)
+    document.body.appendChild(haikuOneLineTwo)
+    document.body.appendChild(haikuTwoLineThree)
+
+
+    // create your haiku title
+    console.log('haikuTwoTitle should exist', !!haikuTwoTitle)
+    console.log('haikuTwoTitle should be a <h1> tag', haikuTwoTitle.tagName === "H1")
+    console.log('haikuTwoTitle should contain some text', haikuTwoTitle.textContent.length > 0)
+
+    // create first line as a <p> tag
+    console.log('haikuTwoLineOne should exist', !!haikuTwoLineOne)
+    console.log('haikuTwoLineOne should be a <p> tag', haikuTwoLineOne.tagName === "P")
+    console.log('haikuTwoLineOne should contain some text', haikuTwoLineOne.textContent.length > 0)
+
+    // create the second line as a <p> tag
+    console.log('haikuTwoLineTwo should exist', !!haikuTwoLineTwo)
+    console.log('haikuTwoLineTwo should be a <p> tag', haikuTwoLineTwo.tagName === "P")
+    console.log('haikuTwoLineTwo should contain some text', haikuTwoLineTwo.textContent.length > 0)
+
+
+    // create the third line as a <p> tag
+    console.log('haikuTwoLineThree should exist', !!haikuTwoLineThree)
+    console.log('haikuTwoLineThree should be a <p> tag', haikuTwoLineThree.tagName === "P")
+    console.log('haikuTwoLineThree should contain some text', haikuTwoLineThree.textContent.length > 0)
+
+    // append to the body in the correct order
+    console.log('haiku two should be appended to the body', document.body.children.length === 8)
+    
+  </script>
+  <script>
+    // Success! Our code above works, however it is not very re-usable. Every time we're writing a haiku, we're creating three new variables, each representing a line. We then have to remember the order of the variables and manually append the line to the document body in the correct order. Let's use our knowledge of arrays to simplify this implementation.
+
+    // Create a variable named haikuOne and set it equal to an empty array
+
+    console.log('haikuOne should be an array', Array.isArray(haikuOne));
+
+    // Arrays are a great data structure to keep some sort of order. 
+    // Add your haiku text to the array, making sure the order is in tact
+    // Your first line should be accessible from haikuOne[0] and your last line should be accessible from haikuOne[2]
+
+    console.log('haikuOne should have three lines' haikuOne.length === 3)
+    console.log('haikuOne should contain text' typeof haikuOne[haikuOne.length] === "string")
+
+    // Here is the fun part, now that we have an array of strings, we can write a code block that repeats
+    // the behavior we want for each line in our array.
+    // The shell is created for you, update the pseudo code below 
+
+    for (var i = 0; i < haikuOne.length; i++) {
+      // create a new <p> element
+      // update the text content equal to the string from the current iteration
+      // append the element to the document body
+      // you can even update any styles you wish right within the for loop. 
+    }
+
+    // After the loop executes, your haiku should be on the screen, in the proper order!
+    console.log('haiku one should be rendered as html', document.body.children.length === 3)
+
+    // Challenge: Update your for loop to make the text cursive for each <p> tag
+    
+    // Challenge: Add a <h1> with a title before rendering the haiku <p> tags
+
+    // Challenge: Use similar logic to add the nav portion of the page with a <ul> and some list items
+    
+    // Challenge: Our code is cleaner, but we'd still have to write a new array variable, title, and a new for loop for every new haiku we wanted to add. How could we refactor to make adding a new haiku even easier? HINT: Try using an object to store your 
+  </script>
+
+</body>
+</html>
