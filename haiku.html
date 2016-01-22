@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Haiku</title>
+<style>
+	ul {padding: 0;}
+		ul li {display: inline; background-color: black; color: white; padding: 10px 20px; border-radius: 4px 4px 0 0;}
+	p {font-size: 20px; color: darkviolet;}
+	h1 {color: darkviolet; border: 1px solid darkviolet; font-weight: bold;}
+	a {text-decoration: none;}
+	img {width: auto;}
+</style>
+ </head>
+
+<body>
+<ul>
+	<li>hide</li>
+	<li>show</li>
+	<li><a href="http://www.haiku-poetry.org/famous-haiku.html" target="_blank">Haiku</a></li>
+</ul>
+<h1>Haiku</h1>
+<p>One shark said to the</p>
+<p>other when eating a clown</p>
+<p>fish: this tastes funny.</p>
+<p><img src="http://www.eonline.com/eol_images/Entire_Site/201478/rs_560x415-140808121644-560.Celeb-Shark-Smiles-Shark-Week.ms.080814.jpg"></p>
+
+<h1>Haiku</h1>
+<p>One shark said to the</p>
+<p>other when eating a clown</p>
+<p>fish: this tastes funny.</p>
+<p><img src="https://i.ytimg.com/vi/Jf0M_pM6sHw/hqdefault.jpg"></p>
+
+
+
+<script>
+	var haiku = document.getElementsByTagName('p');
+	for (var i = 0; i < haiku.length; i++) {
+	  console.log(haiku[i]);
+	  haiku[i].style.margin = '0';
+	}
+
+	var body = document.body;
+	body.style.margin = '0 auto'
+	body.style.width = '300px'
+
+	var headers = document.getElementsByTagName('h1');
+	for (var i = 0; i < headers.length; i++) {
+		headers[i].style.fontSize = '25px';
+		headers[i].style.color = '#333'
+	}
+
+	var allElementsWithinBody = document.body.children;
+	for (var i = 0; i < allElementsWithinBody.length; i++) {
+		allElementsWithinBody[i].style.fontFamily = 'cursive';
+	}
+
+	var links = document.getElementsByTagName('a');
+	for (var i = 0; i < links.length; i++) {
+		links[i].style.color = 'crimson'
+	}
+
+	var images = document.getElementsByTagName('img');
+	for (var i = 0; i < images.length; i++) {
+		images[i].style.height = '100px'
+	}
+
+
+
+</script>
+</body>
+
+</html>

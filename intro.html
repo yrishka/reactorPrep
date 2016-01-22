@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marina Kozlovskaja</title>
+  <style>
+    
+  	body {font-family: 'PT Serif', serif; background-color: lightslategrey;}
+  	div {background-color: #fff; margin: 0 auto; width: 600px; padding: 20px;}
+  	p {width: 200px; float: left; text-align: center;}
+    li {padding-bottom: 10px;}
+    li li {padding-bottom: 0px;}
+    h1, h2 {color: lightslategrey; font-family: 'PT Sans', sans-serif;}
+    img {margin-top: 10px;}
+  </style>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+  </head>
+  <body>
+    <div>
+        <h1>Personal Bio</h1>
+        <ul>
+        	<li>I grew up in Lithuania</li>
+        	<li>My interests are: traveling, skiing, rock climbing, photography, painting</li>
+        	<li>Cool facts about me: 
+        		<ul>
+        			<li>I've been in more than 40 countries</li>
+        			<li>I went to Burning Man 8 times</li>
+        			<li>I love to be scared, to be outside of my comfort zone</li>
+        		</ul></li>
+        	<li>I am learning JS to be a better web developer</li>
+        	</ul>
+        </ul>
+
+        <h2>Favorite Movies</h2>
+    	    <p>Everything Is Illuminated<br>
+    	    	<a href="http://www.imdb.com/title/tt0404030/" target="_blank"><img src="http://www.gstatic.com/tv/thumb/movieposters/88906/p88906_p_v8_aa.jpg"></a></p>
+    	    <p>Big Fish<br>
+    	    	<a href="http://www.imdb.com/title/tt0319061/" target="_blank"><img src="http://www.gstatic.com/tv/thumb/movieposters/32942/p32942_p_v8_aa.jpg"></a></p>
+    	    <p>Searching for Sugar Man<br>
+    	    	<a href="http://www.imdb.com/title/tt2125608/" target="_blank"><img src="http://t3.gstatic.com/images?q=tbn:ANd9GcTD4mu_MOC3pHu5FLhgkulv5STq7rhqvrcw5JcW-qOLdM1TQIHY"></a></p><br clear="both">
+
+        <h2>Places I want to Vacation</h2>
+        <ul>
+        	<li>New Zealand</li>
+        	<li>Morocco</li>
+        	<li>Antarctica</li>
+        </ul>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+		    	// var last = function(arr) {
+		    	// 	return arr.pop()
+		    	// }
+		    	// var last = function(arr) {
+		    	// 	var index = arr.length - 1;
+		    	// 	return arr.[index]
+		    	// }
+    	var last = function(arr) {
+    		return arr[arr.length - 1]
+    	}
+
+    	// var p = document.createElement('p')
+    	// document.body.appendChild(p)
+    	// p.textContent = 'hello, hello'
+
+    	// var p = document.createElement('p')
+    	// var userName = prompt('What is your name?')
+    	// if (userName.length > 2) {
+    	// 	p.textContent = 'Hello ' + userName;
+    	// } else {
+    	// 	p.textContent = 'Hello stranger'
+    	// }
+    	// document.body.appendChild(p)
+
+    	// var paragraphs = document.getElementsByTagName('p')
+    	// // paragraphs[1]
+    	// var headings = document.getElementsByTagName('h2')
+    	// var firstHeadingElement = headings[0]
+
+    	// var listItemElements = document.getElementsByTagName('li')
+    	// listItemElements[0].textContent = 'Zimbabwe'
+    	// last(listItemElements).textContent = 'Norway'
+
+    	// var imageElements = document.getElementsByTagName('img')
+    	// for (var i = 0; i < imageElements.length; i++) {
+    	// 	imageElements[i].style.height = 'auto'
+    	// 	imageElements[i].style.width = '50px'
+    	// }
+
+    	var findAll = function(str) {
+    		return document.getElementsByTagName(str)
+    	}
+
+    	var imageElements = findAll('img')
+    	for (var i = 0; i < imageElements.length; i++) {
+    		imageElements[i].style.height = 'auto'
+    		imageElements[i].style.width = '100px'
+    	}
+    	
+
+
+    </script>
+  </body>
+</html>
